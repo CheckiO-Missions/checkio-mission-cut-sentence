@@ -31,6 +31,12 @@ TESTS = {
         },{
             "input": ["OMG you did it", 4],
             "answer": "OMG..."
+        },{
+            "input": ["Hi my name is Alex", 10],
+            "answer": "Hi my name..."
+        },{
+            "input": ["Hi my name is Alex", 1],
+            "answer": "..."
         }
     ]
 }
