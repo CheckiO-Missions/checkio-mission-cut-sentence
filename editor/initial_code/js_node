@@ -1,13 +1,18 @@
 "use strict";
 
-function sumTwo(a, b) {
-    return 0;
+function cutSentence(line, length) {
+    // cut a given sentence in a way so it become shorter than a given length
+
+    // your code here
+
+    return ''
 }
 
 var assert = require('assert');
 
 if (!global.is_checking) {
-    assert.equal(sumTwo(3, 2), 5, "First")
-    assert.equal(sumTwo(5, 7), 12, "Second")
-    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
+    assert.equal(cutSentence("Hi my name is Alex", 8), "Hi my...", "First")
+    assert.equal(cutSentence("Hi my name is Alex", 4), "Hi...", "Second")
+    assert.equal(cutSentence("Hi my name is Alex", 20), "Hi my name is Alex", "Third")
+    console.log("Done! Do you like it? Go Check it!");
 }

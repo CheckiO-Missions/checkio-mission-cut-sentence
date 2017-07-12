@@ -1,5 +1,5 @@
 <p>
-    You should cut a given sentence  in a way so it become shorter than a given length and the cutted version should contains only full words.
+    You should cut a given sentence in a way so it become shorter than a given length and the cutted version should contains only full words.
 </p>
 
 <p>
@@ -20,11 +20,20 @@
     <p>
         <strong>Example:</strong>
     </p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: python">
+cutSentence("Hi my name is Alex", 8) == "Hi my..."
+cutSentence("Hi my name is Alex", 4) == "Hi..."
+cutSentence("Hi my name is Alex", 20) == "Hi my name is Alex"
+</pre>
+{% else %}
 <pre class="brush: python">
 cut_sentence("Hi my name is Alex", 8) == "Hi my..."
 cut_sentence("Hi my name is Alex", 4) == "Hi..."
 cut_sentence("Hi my name is Alex", 20) == "Hi my name is Alex"
 </pre>
+{% endif %}
+
 </div>
 
 <p>

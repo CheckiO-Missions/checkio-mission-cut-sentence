@@ -1,4 +1,8 @@
 def cut_sentence(line, length):
+    '''
+    cut a given sentence in a way so it become shorter than a given length
+    '''
+    # your code here
     return line[:length]
 
 if __name__ == '__main__':
@@ -6,4 +10,4 @@ if __name__ == '__main__':
     assert cut_sentence("Hi my name is Alex", 8) == "Hi my...", "First"
     assert cut_sentence("Hi my name is Alex", 4) == "Hi...", "First"
     assert cut_sentence("Hi my name is Alex", 20) == "Hi my name is Alex", "Third"
-    print('Done')
+    print('Done! Do you like it? Go Check it!')
