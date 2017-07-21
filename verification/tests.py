@@ -19,6 +19,9 @@ TESTS = {
         },{
             "input": ["Hi my name is Alex", 20],
             "answer": "Hi my name is Alex"
+        },{
+            "input": ["Hi my name is Alex", 18],
+            "answer": "Hi my name is Alex"
         }
     ],
     "Extra": [
@@ -38,10 +41,7 @@ TESTS = {
             "input": ["Hi my name is Alex", 1],
             "answer": "..."
         },{
-            "input": ["Hi my name is Alex", 18],
-            "answer": "Hi my name is Alex"
-        },{
-            "input": ["Hi my name is sightseeing", 22],
+            "input": ["Hi my name is Bartholomew", 22],
             "answer": "Hi my name is..."
         }
     ]
