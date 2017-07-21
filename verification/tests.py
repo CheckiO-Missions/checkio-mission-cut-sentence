@@ -43,6 +43,9 @@ TESTS = {
         },{
             "input": ["Hi my name is Bartholomew", 22],
             "answer": "Hi my name is..."
+        },{
+            "input": ["Hello my name is Alex", 2],
+            "answer": "..."
         }
     ]
 }
