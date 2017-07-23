@@ -1,42 +1,69 @@
 <p>
-    You should cut a given sentence in a way so it become shorter(or equal) than a given length and the cutted version should contains only full words.
+  Your task in this mission is to truncate a sentence to a length, that does not exceed a
+  given number of characters.
 </p>
 
 <p>
-    If inital sentence is short enough you don't need to put '...' in the end.
+  If the given sentence already is short enough you don't have to do anything to it, but
+  if it needs to be truncated the omission must be indicated by concatenating an ellipsis
+  ("...") to the end of the shortened sentence.
 </p>
 
 <p>
-    <strong>Input: </strong> Two arguments. First is a sentence as String, and the second - how long it can be, as int.
+  The shortened sentence can contain complete words and spaces.<br>
+  It must neither contain truncated words nor trailing spaces.<br>
+  The ellipsis has been taken into account for the allowed number of characters, so it
+  does not count against the given length.
 </p>
 
 <p>
-    <strong>Output: </strong> Cuted sentence, as String.
+  <strong>Input:</strong> Two arguments:
+  <ul>
+    <li>one-line sentence as a string</li>
+    <li>max length of the truncated sentence as an int</li>
+  </ul>
 </p>
 
-
+<p>
+  <strong>Output:</strong> The shortened sentence plus the ellipsis (if required) as a
+  one-line string.
+</p>
 
 <div class="for_info_only">
-    <p>
-        <strong>Example:</strong>
-    </p>
+  <p>
+      <strong>Examples:</strong>
+  </p>
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: python">
+  <pre class="brush: python">
 cutSentence("Hi my name is Alex", 8) == "Hi my..."
 cutSentence("Hi my name is Alex", 4) == "Hi..."
 cutSentence("Hi my name is Alex", 20) == "Hi my name is Alex"
-</pre>
+cutSentence("Hi my name is Alex", 18) == "Hi my name is Alex"</pre>
 {% else %}
-<pre class="brush: python">
+  <pre class="brush: python">
 cut_sentence("Hi my name is Alex", 8) == "Hi my..."
 cut_sentence("Hi my name is Alex", 4) == "Hi..."
 cut_sentence("Hi my name is Alex", 20) == "Hi my name is Alex"
-</pre>
+cut_sentence("Hi my name is Alex", 18) == "Hi my name is Alex"</pre>
 {% endif %}
-
 </div>
 
 <p>
-    <strong>Precondition:</strong>
-    <i>Only English letters</i>
+  <strong>Precondition:</strong><br>
+  {% if interpreter.slug == "js-node" %}
+  <!-- TBI means TO BE INSERTED -->
+  <ul>
+    <li>TBI</li>
+    <li>TBI</li>
+    <li>TBI</li>
+    <li>TBI</li>
+  </ul>
+  {% else %}
+  <ul>
+    <li>line.startswith(' ') == False</li>
+    <li>0 < len(line) ≤ 79</li>
+    <li>0 < length ≤ 76</li>
+    <li>all(char in string.ascii_letters + ' ' for char in line)</li>
+  </ul>
+  {% endif %}
 </p>
