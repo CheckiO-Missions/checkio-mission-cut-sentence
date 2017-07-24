@@ -11,9 +11,9 @@ function cutSentence(line, length) {
 var assert = require('assert');
 
 if (!global.is_checking) {
-    assert.equal(cutSentence("Hi my name is Alex", 8), "Hi my...", "First")
-    assert.equal(cutSentence("Hi my name is Alex", 4), "Hi...", "Second")
-    assert.equal(cutSentence("Hi my name is Alex", 20), "Hi my name is Alex", "Third")
-    assert.equal(cutSentence("Hi my name is Alex", 18), "Hi my name is Alex", "Fourth")
+    assert.equal(cutSentence("Hi my name is Alex", 4), "Hi...", "First")
+    assert.equal(cutSentence("Hi my name is Alex", 8), "Hi my...", "Second")
+    assert.equal(cutSentence("Hi my name is Alex", 18), "Hi my name is Alex", "Third")
+    assert.equal(cutSentence("Hi my name is Alex", 20), "Hi my name is Alex", "Fourth")
     console.log("Done! Do you like it? Go Check it!");
 }
