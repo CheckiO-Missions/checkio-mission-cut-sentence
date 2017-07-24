@@ -41,22 +41,21 @@ cutSentence("Hi my name is Alex", 18) == "Hi my name is Alex"
 cutSentence("Hi my name is Alex", 20) == "Hi my name is Alex"</pre>
 {% else %}
   <pre class="brush: python">
-cut_sentence("Hi my name is Alex", 8) == "Hi my..."
 cut_sentence("Hi my name is Alex", 4) == "Hi..."
-cut_sentence("Hi my name is Alex", 20) == "Hi my name is Alex"
-cut_sentence("Hi my name is Alex", 18) == "Hi my name is Alex"</pre>
+cut_sentence("Hi my name is Alex", 8) == "Hi my..."
+cut_sentence("Hi my name is Alex", 18) == "Hi my name is Alex"
+cut_sentence("Hi my name is Alex", 20) == "Hi my name is Alex"</pre>
 {% endif %}
 </div>
 
 <p>
   <strong>Precondition:</strong><br>
   {% if interpreter.slug == "js-node" %}
-  <!-- TBI means TO BE INSERTED -->
   <ul>
-    <li>TBI</li>
-    <li>TBI</li>
-    <li>TBI</li>
-    <li>TBI</li>
+    <li>line.startsWith(' ') === false</li>
+    <li>0 < line.length ≤ 79</li>
+    <li>0 < length ≤ 76</li>
+    <li>all chars in line are English Letters and/or spaces</li>
   </ul>
   {% else %}
   <ul>
