@@ -1,0 +1,27 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}{% endblock env %}
+
+{% block start %}
+def cut_sentence(line: str, length: int) -> str:
+    '''
+    Cut a given sentence, so it becomes shorter than or equal to a given length.
+    '''
+    # your code here
+    return line[:length]
+
+{% endblock start %}
+
+{% block example %}
+print('Example:')
+print(cut_sentence("Hi my name is Alex", 4))
+{% endblock %}
+
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}cut_sentence({{t.input|p_args}})
+{% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The mission is done! Click 'Check Solution' to earn rewards!")
+{% endblock final %}

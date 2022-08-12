@@ -1,0 +1,70 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        Підскажи, з чого мені розпочати?
+    </div>
+    <div class="answer">
+        Ти можеш завжди почитати <a target="_blank" href="https://docs.python.org/3/library/index.html">Python Стандартні Бібліотеки</a>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Можна конкретніше?
+    </div>
+    <div class="answer">
+        Звичайно. <a href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> тобі допоможе.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ти впевнений, що якась з тих функцій мені допоможе?
+    </div>
+    <div class="answer">
+        Так, почитай про <a targert="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">функцію placeholder</a>.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Чомусь вона не працює як треба...
+    </div>
+    <div class="answer">
+        Щож, це тому що функція сама по собі не є рішенням. Спочатку використай її, щоб розділити рядок:
+
+        <pre class="brush: python">
+import textwrap
+
+
+shortened = textwrap.shorten(original, width, placeholder='', break_long_words=False)
+        </pre>
+
+        Потім додай <b>...</b> в кінець:
+
+        <pre class="brush: python">
+return shortened + '...'
+        </pre>
+
+        І не забувай, ти маєш повернути вхідний рядок, якщо воно досить коротке.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Чудово! Можеш допомогти мені це все об'єднати в одне рішення?
+    </div>
+    <div class="answer">
+    Звичайно. Ось як може бути вирішена місія.
+    <pre class="brush: python">
+import textwrap
+
+
+def cut_sentence(line: str, length: int) -> str:
+    if len(line) <= length:
+        return line
+    else:
+        return textwrap.shorten(line, width=length,
+        placeholder="", break_long_words=False) + "..."
+    </pre>
+    </div>
+</div>
+
+
+</body>
