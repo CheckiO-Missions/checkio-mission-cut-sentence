@@ -17,10 +17,10 @@
 </div>
 <div class="question-answer">
     <div class="question">
-        Are you sure that any of those functions can help me to solve the mission?
+        Are you sure that any of those methods can help me to solve the mission?
     </div>
     <div class="answer">
-        Yup.. Check <a targert="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">placeholder function</a>.
+        Yup.. Check <a targert="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">shorten() method</a>.
     </div>
 </div>
 <div class="question-answer">
@@ -28,19 +28,22 @@
         For some reason the function doesn't help.
     </div>
     <div class="answer">
-        well, It is because the function itself is not a solution. First you should use it to cut the line
+        Well, It is because the function itself is not a solution. First you should use it to cut the line
 
         <pre class="brush: python">
+import textwrap
+
+
 shortened = textwrap.shorten(original, width, placeholder='', break_long_words=False)
         </pre>
 
-        then you should add <b>...</b> in the end
+        Then you should add <b>...</b> in the end
 
         <pre class="brush: python">
 return shortened + '...'
         </pre>
 
-        and don't forget that you should return an original sentence if it is short enough
+        And don't forget that you should return an original sentence if it is short enough
     </div>
 </div>
 <div class="question-answer">
@@ -51,12 +54,14 @@ return shortened + '...'
     Sure. This is how the mission can be solved.
     <pre class="brush: python">
 import textwrap
-​
-def cut_sentence(original, width):
-    if len(original) <= width:
-        return original
-    return textwrap.shorten(original, width,
-        placeholder='', break_long_words=False) + '...'
+
+
+def cut_sentence(line: str, length: int) -> str:
+    if len(line) <= length:
+        return line
+    else:
+        return textwrap.shorten(line, width=length,
+        placeholder="", break_long_words=False) + "..."
     </pre>
     </div>
 </div>
