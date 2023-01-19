@@ -1,70 +1,90 @@
 <body data-author="oduvan">
 <div class="question-answer">
     <div class="question">
-        Can you give me an idea how can start here?
+        <p>
+            Can you give me an idea how can start here?
+        </p>
     </div>
     <div class="answer">
-        Well, you can always start with <a target="_blank" href="https://docs.python.org/3/library/index.html">Python Standart Library</a>
+        <p>
+            Well, you can always start with <a target="_blank" href="https://docs.python.org/3/library/index.html">Python Standard Library</a>
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Can you be more specific?
+        <p>
+            Can you be more specific?
+        </p>
     </div>
     <div class="answer">
-        Sure. <a href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> is what you are looking for.
+        <p>
+            Sure. <a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> is what you are looking for.
+        </p>
+        
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Are you sure that any of those methods can help me to solve the mission?
+        <p>
+            Are you sure that any of those methods can help me to solve the mission?
+        </p>
     </div>
     <div class="answer">
-        Yup.. Check <a targert="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">shorten() method</a>.
+        <p>
+            Yup.. Check <a target="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">shorten() method</a>.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        For some reason the function doesn't help.
+        <p>
+            For some reason the function doesn't help.
+        </p>
     </div>
     <div class="answer">
-        Well, It is because the function itself is not a solution. First you should use it to cut the line
-
+        <p>
+           Well, It is because the function itself is not a solution. First you should use it to cut the line 
+        </p>
         <pre class="brush: python">
 import textwrap
 
 
 shortened = textwrap.shorten(original, width, placeholder='', break_long_words=False)
         </pre>
-
-        Then you should add <b>...</b> in the end
-
+        <p>
+            Then you should add <b class="code">...</b> in the end.
+        </p>
         <pre class="brush: python">
 return shortened + '...'
         </pre>
-
-        And don't forget that you should return an original sentence if it is short enough
+        <p>
+            And don't forget that you should return an original sentence if it is short enough.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Awesome! Can you help me to put all of this together into one solution
+        <p>
+            Awesome! Can you help me to put all of this together into one solution.
+        </p>
     </div>
     <div class="answer">
-    Sure. This is how the mission can be solved.
-    <pre class="brush: python">
+        <p>
+            Sure. This is how the mission can be solved.
+        </p>
+        <pre class="brush: python">
 import textwrap
 
 
 def cut_sentence(line: str, length: int) -> str:
+
     if len(line) <= length:
         return line
     else:
         return textwrap.shorten(line, width=length,
         placeholder="", break_long_words=False) + "..."
-    </pre>
+        </pre>
     </div>
 </div>
-
-
 </body>
