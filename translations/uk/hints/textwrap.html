@@ -72,7 +72,8 @@ return shortened + '...'
         <p>
             Звичайно. Ось як може бути вирішена місія.
         </p>
-    <pre class="brush: python">
+        <div class="spoiler">
+        <pre class="brush: python">
 import textwrap
 
 
@@ -83,7 +84,8 @@ def cut_sentence(line: str, length: int) -> str:
     else:
         return textwrap.shorten(line, width=length,
         placeholder="", break_long_words=False) + "..."
-    </pre>
+        </pre>
+        </div>
     </div>
 </div>
 </body>
