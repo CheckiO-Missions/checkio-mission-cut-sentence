@@ -19,14 +19,14 @@
 <p>
   <strong>Input:</strong> Two arguments:
   <ul>
-    <li>one-line sentence as a string;</li>
-    <li>max length of the truncated sentence as an int.</li>
+    <li>one-line sentence as a <span translate="repeat">string</span>;</li>
+    <li>max length of the truncated sentence as {% if is_js %}a <span translate="repeat">number</span>{% else %}an <span translate="repeat">integer</span>{% endif %}.</li>
   </ul>
 </p>
 
 <p>
   <strong>Output:</strong> The shortened sentence plus the ellipsis (if required) as a
-  one-line string.
+  one-line <span translate="repeat">string</span>.
 </p>
 
 <div class="for_info_only">
@@ -37,20 +37,11 @@
 </div>
 
 <p>
-  <strong>Precondition:</strong><br>
-  {% if interpreter.slug == "js-node" %}
-  <ul>
-    <li>line.startsWith(' ') === false</li>
-    <li>0 < line.length ≤ 79</li>
-    <li>0 < length ≤ 76</li>
-    <li>усі символи в рядку є англійськими літерами та/або пробілами</li>
-  </ul>
-  {% else %}
+  <strong>Preconditions:</strong><br>
   <ul>
     <li>line.startswith(' ') == False</li>
     <li>0 < len(line) ≤ 79</li>
     <li>0 < length ≤ 76</li>
     <li>all(char in string.ascii_letters + ' ' for char in line)</li>
   </ul>
-  {% endif %}
 </p>
