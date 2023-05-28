@@ -1,0 +1,47 @@
+<p>
+  Votre tâche dans cette mission est de tronquer une phrase pour qu'elle ne dépasse pas un certain nombre de caractères
+  nombre de caractères donné.
+</p>
+
+<p>
+  Si la phrase donnée est déjà suffisamment courte, vous n'avez rien à faire. Mais si elle a besoin d'être tronquée, vous ne devez pas le faire
+  mais si elle doit être tronquée, l'omission doit être indiquée en concaténant un point de suspension
+  ("...") à la fin de la phrase raccourcie.
+</p>
+
+<p>
+  La phrase abrégée peut contenir des mots complets et des espaces.<br>
+  Elle ne doit pas contenir de mots tronqués ni d'espaces de fin de phrase.<br>
+  L'ellipse a été prise en compte dans le nombre de caractères autorisés, elle n'est donc pas décomptée de la longueur donnée
+  n'est donc pas décompté de la longueur donnée.
+</p>
+
+<p>
+ <strong>Entrée:</strong> Deux arguments:
+  <ul>
+    <li>une phrase d'une ligne sous la forme d'une <span>chaîne de caractères</span> <span>(string)</span>;</li>
+    <li>longueur maximale de la phrase tronquée sous la forme {% if is_js %}d'un <span>nombre</span> <span>(number)</span>{% else %} d'un <span>entier</span> <span>(integer)</span>{% endif %}.</li>
+  </ul>
+</p>
+
+<p>
+ <strong>Résultat:</strong> La phrase tronquée et l'ellipse (si nécessaire) sous la forme d'une chaîne d'une ligne
+ <span>chaîne d'</span> une ligne <span>(string)</span>.
+</p>
+
+<div class="for_info_only">
+  <p>
+      <strong>Exemples:</strong>
+  </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p>
+  <strong>Conditions préalables:</strong><br>
+  <ul>
+    <li>line.startswith(' ') == False</li>
+    <li>0 &lt; len(line) ≤ 79</li>
+    <li>0 &lt; longueur ≤ 76</li>
+    <li>all(char in string.ascii_letters + ' ' for char in line)</li>
+  </ul>
+</p>
