@@ -1,32 +1,28 @@
 <p>
-  Your task in this mission is to truncate a sentence to a length that does not exceed a
-  given number of characters.
+  Your task in this mission is to truncate a sentence to a length that does not exceed a given number of characters.
 </p>
 
 <p>
-  If the given sentence already is short enough, you don't have to do anything to it. But
-  if it needs to be truncated, the omission must be indicated by concatenating an ellipsis
-  ("...") to the end of the shortened sentence.
+  If the given sentence already is short enough, you don't have to do anything to it. But if it needs to be truncated, the omission must be indicated by concatenating an ellipsis ("...") to the end of the shortened sentence.
 </p>
 
 <p>
   The shortened sentence can contain complete words and spaces.<br>
   It must neither contain truncated words nor trailing spaces.<br>
-  The ellipsis has been taken into account for the allowed number of characters, so it
-  does not count against the given length.
+  The ellipsis has been taken into account for the allowed number of characters, so it does not count against the given length.
 </p>
 
 <p>
   <strong>Input:</strong> Two arguments:
   <ul>
-    <li>one-line sentence as a <span translate="repeat">string</span>;</li>
-    <li>max length of the truncated sentence as {% if is_js %}a <span translate="repeat">number</span>{% else %}an <span translate="repeat">integer</span>{% endif %}.</li>
+    <li>one-line sentence as a string <span translate="no">(str{% if is_js %}ing{% endif %})</span>;</li>
+    <li>max length of the truncated sentence as an integer a <span translate="no">{% if is_js %}(number){% else %}(int){% endif %}</span>.</li>
   </ul>
 </p>
 
 <p>
   <strong>Output:</strong> The shortened sentence plus the ellipsis (if required) as a
-  one-line <span translate="repeat">string</span>.
+  one-line string <span translate="no">(str{% if is_js %}ing{% endif %})</span>.
 </p>
 
 <div class="for_info_only">
