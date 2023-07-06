@@ -1,0 +1,43 @@
+<p>
+  你在这个任务中的任务是将一个句子截断，使其长度不超过指定的字符数。
+</p>
+
+<p>
+  如果给定的句子已经足够短，你不必对它做什么。但如果需要截断，则必须在缩短后的句子末尾连接一个省略号（"..."）来表示省略。
+</p>
+
+<p>
+  缩短的句子可以包含完整的单词和空格。<br>
+  它既不能包含截断的单词，也不能包含尾部的空格。<br>
+  省略号已被计入允许的字符数，因此它不计入给定的长度。
+</p>
+
+<p>
+ <strong>输入：</strong>两个参数：
+  <ul>
+    <li>作为一个字符串的单行句子 <span>(str{% if is_js %}ing{% endif %})</span>;</li>
+    <li>被截断的句子的最大长度为一个整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.</li>
+  </ul>
+</p>
+
+<p>
+ <strong>输出：</strong>缩短的句子加上省略号（如果需要），作为一个
+  单行字符串 <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<div class="for_info_only">
+  <p>
+      <strong>例子：</strong>
+  </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p>
+  <strong>前提条件：</strong><br>
+  <ul>
+    <li>line.startingwith(' ') == False</li>
+    <li>0 &lt; len(line) ≤ 79</li>
+    <li>0 &lt; 长度 ≤ 76</li>
+    <li>all(char in string.ascii_letters + '' for char in line)</li>
+  </ul>
+</p>
