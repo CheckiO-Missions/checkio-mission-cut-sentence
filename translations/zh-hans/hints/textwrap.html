@@ -1,0 +1,92 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            你能给我一个想法，如何在这里开始吗？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            嗯，你总是可以从<a target="_blank" href="https://docs.python.org/3/library/index.html">Python Standard Library</a>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            你能说得更具体些吗？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            当然可以。<a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> 就是你要找的东西。
+        </p>
+        
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            你确定这些方法中的任何一种都能帮助我解决这个任务吗？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            是的。检查<a target="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">shorten() method</a> 。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            由于某些原因，该功能没有帮助。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           嗯，这是因为函数本身并不是一个解决方案。首先，你应该用它来切割这一行 
+        </p>
+        <pre class="brush: python">
+import textwrap
+
+
+shortened = textwrap.shorten(original, width, placeholder='', break_long_words=False)
+        </pre>
+        <p>
+            然后你应该在最后添加<b class="code">...</b> 。
+        </p>
+        <pre class="brush: python">
+return shortened + '...'
+        </pre>
+        <p>
+            不要忘了，如果你的句子足够短，你应该返回一个原句。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            棒极了!你能不能帮我把所有这些放在一起，变成一个解决方案。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            当然，这就是任务的解决方式。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+import textwrap
+
+
+def cut_sentence(line: str, length: int) -> str:
+
+    if len(line) <= length:
+        return line
+    else:
+        return textwrap.shorten(line, width=length,
+        placeholder="", break_long_words=False) + "..."
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
