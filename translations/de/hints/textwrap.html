@@ -1,0 +1,92 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Können Sie mir eine Idee geben, wie ich hier anfangen kann?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Nun, Sie können immer beginnen mit <a target="_blank" href="https://docs.python.org/3/library/index.html">Python Standard Library</a>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Können Sie etwas genauer sein?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Sicher. <a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> ist das, wonach Sie suchen.
+        </p>
+        
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Sind Sie sicher, dass eine dieser Methoden mir helfen kann, die Mission zu lösen?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Ja. Überprüfen Sie <a target="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">shorten() method</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Aus irgendeinem Grund hilft die Funktion nicht weiter.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           Nun, das liegt daran, dass die Funktion selbst keine Lösung ist. Zuerst sollten Sie sie verwenden, um die Zeile zu kürzen 
+        </p>
+        <pre class="brush: python">
+import textwrap
+
+
+shortened = textwrap.shorten(original, width, placeholder='', break_long_words=False)
+        </pre>
+        <p>
+            Dann sollten Sie am Ende <b class="code">...</b> hinzufügen.
+        </p>
+        <pre class="brush: python">
+return shortened + '...'
+        </pre>
+        <p>
+            Und vergessen Sie nicht, dass Sie einen Originalsatz zurückgeben sollten, wenn er kurz genug ist.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Fantastisch! Können Sie mir helfen, all dies in einer Lösung zusammenzufassen.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Sicher. So kann die Aufgabe gelöst werden.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+import textwrap
+
+
+def cut_sentence(line: str, length: int) -> str:
+
+    if len(line) <= length:
+        return line
+    else:
+        return textwrap.shorten(line, width=length,
+        placeholder="", break_long_words=False) + "..."
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
