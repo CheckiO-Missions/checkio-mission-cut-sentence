@@ -1,0 +1,44 @@
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+  Ihre Aufgabe in dieser Mission ist es, einen Satz auf eine Länge zu kürzen, die eine bestimmte Anzahl von Zeichen nicht überschreitet.
+</p>
+
+<p>
+  Wenn der vorgegebene Satz bereits kurz genug ist, müssen Sie nichts mehr daran ändern. Wenn er jedoch gekürzt werden muss, müssen Sie dies durch Anhängen einer Ellipse ("...") an das Ende des gekürzten Satzes anzeigen.
+</p>
+
+<p>
+  Der gekürzte Satz kann vollständige Wörter und Leerzeichen enthalten.<br>
+  Er darf weder abgeschnittene Wörter noch nachgestellte Leerzeichen enthalten.<br>
+  Die Ellipse wurde bei der zulässigen Anzahl von Zeichen berücksichtigt und wird daher nicht auf die angegebene Länge angerechnet.
+</p>
+
+<p>
+ <strong>Eingabe:</strong> Zwei Argumente:
+  <ul>
+    <li>einzeiliger Satz als Zeichenkette <span>(str{% if is_js %}ing{% endif %})</span>;</li>
+    <li>maximale Länge des gekürzten Satzes als Ganzzahl <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.</li>
+  </ul>
+</p>
+
+<p>
+ <strong>Ausgabe:</strong> Der gekürzte Satz plus die Ellipse (falls erforderlich) als ein
+  einzeilige Zeichenfolge <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<div class="for_info_only">
+  <p>
+      <strong>Beispiele:</strong>
+  </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p>
+  <strong>Vorbedingungen:</strong><br>
+  <ul>
+    <li>line.startswith(' ') == False</li>
+    <li>0 &lt; len(Zeile) ≤ 79</li>
+    <li>0 &lt; Länge ≤ 76</li>
+    <li>all(char in string.ascii_letters + ' ' for char in line)</li>
+  </ul>
+</p>
