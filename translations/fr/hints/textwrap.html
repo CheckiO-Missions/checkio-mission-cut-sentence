@@ -7,21 +7,8 @@
     </div>
     <div class="answer">
         <p>
-            Vous pouvez toujours commencer par <a target="_blank" href="https://docs.python.org/3/library/index.html">Python Standard Library</a>
+            Bien sûr, la bibliothèque standard de Python <a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> est exactement ce dont vous avez besoin pour ce genre de tâches. Veuillez consulter la description et essayer de trouver les méthodes nécessaires.
         </p>
-    </div>
-</div>
-<div class="question-answer">
-    <div class="question">
-        <p>
-            Pouvez-vous être plus précis?
-        </p>
-    </div>
-    <div class="answer">
-        <p>
-            Bien sûr. <a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> est ce que vous recherchez.
-        </p>
-        
     </div>
 </div>
 <div class="question-answer">
@@ -32,23 +19,22 @@
     </div>
     <div class="answer">
         <p>
-            Oui. Vérifiez <a target="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">shorten() method</a>.
+            Oui. Vérifiez la méthode <a target="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">shorten()</a>.
         </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            Pour une raison ou une autre, la fonction ne vous aide pas.
+            Pour une raison quelconque, la fonction ne vous aide pas.
         </p>
     </div>
     <div class="answer">
         <p>
-           C'est parce que la fonction elle-même n'est pas une solution. Vous devez d'abord l'utiliser pour couper la ligne 
+           C'est parce que la fonction elle-même n'est pas une solution. Vous devez d'abord l'utiliser pour couper la ligne. 
         </p>
         <pre class="brush: python">
 import textwrap
-
 
 shortened = textwrap.shorten(original, width, placeholder='', break_long_words=False)
         </pre>
@@ -76,7 +62,6 @@ return shortened + '...'
         <div class="spoiler">
         <pre class="brush: python">
 import textwrap
-
 
 def cut_sentence(line: str, length: int) -> str:
 
