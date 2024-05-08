@@ -7,21 +7,8 @@
     </div>
     <div class="answer">
         <p>
-            Well, you can always start with <a target="_blank" href="https://docs.python.org/3/library/index.html">Python Standard Library</a>
+            Sure. Python Standard Library <a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> is exactly what you need for such kind of tasks. Please explore the description and try to find necessary methods.
         </p>
-    </div>
-</div>
-<div class="question-answer">
-    <div class="question">
-        <p>
-            Can you be more specific?
-        </p>
-    </div>
-    <div class="answer">
-        <p>
-            Sure. <a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> is what you are looking for.
-        </p>
-        
     </div>
 </div>
 <div class="question-answer">
@@ -49,7 +36,6 @@
         <pre class="brush: python">
 import textwrap
 
-
 shortened = textwrap.shorten(original, width, placeholder='', break_long_words=False)
         </pre>
         <p>
@@ -76,7 +62,6 @@ return shortened + '...'
         <div class="spoiler">
         <pre class="brush: python">
 import textwrap
-
 
 def cut_sentence(line: str, length: int) -> str:
 
