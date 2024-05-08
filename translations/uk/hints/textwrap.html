@@ -2,80 +2,66 @@
 <div class="question-answer">
     <div class="question">
         <p>
-            Підкажи, з чого мені розпочати?
+            Чи можете ви дати мені ідею, з чого можна почати?
         </p>
     </div>
     <div class="answer">
         <p>
-            Ти можеш завжди почитати <a target="_blank" href="https://docs.python.org/3/library/index.html">Python Стандартні Бібліотеки</a>.
+            Звичайно. Стандартна бібліотека Python <a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> - це саме те, що вам потрібно для таких завдань. Будь ласка, вивчіть опис і спробуйте знайти необхідні методи.
         </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            Можна конкретніше?
+            Ви впевнені, що якийсь з цих методів допоможе мені розв'язати задачу?
         </p>
     </div>
     <div class="answer">
         <p>
-            Звичайно. <a target="_blank" href="https://docs.python.org/3/library/textwrap.html">Textwrap</a> тобі допоможе.
+            Так... Перевір метод <a target="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">shorten()</a>.
         </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            Ти впевнений, що якась з тих методів мені допоможе?
+            Чомусь функція не допомагає.
         </p>
     </div>
     <div class="answer">
         <p>
-            Так, почитай про <a target="_blank" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder">метод shorten()</a>.
-        </p>
-    </div>
-</div>
-<div class="question-answer">
-    <div class="question">
-        <p>
-            Чомусь вона не працює як треба...
-        </p>
-    </div>
-    <div class="answer">
-        <p>
-            Щож, це тому що функція сама по собі не є рішенням. Спочатку використай її, щоб розділити рядок:
+           Це тому, що функція сама по собі не є рішенням. Спочатку ви повинні використати її, щоб вирізати лінію. 
         </p>
         <pre class="brush: python">
 import textwrap
 
-
 shortened = textwrap.shorten(original, width, placeholder='', break_long_words=False)
         </pre>
         <p>
-            Потім додай <b class="code">...</b> в кінець:
+            Потім ви повинні додати <b class="code">...</b> в кінці.
         </p>
         <pre class="brush: python">
 return shortened + '...'
         </pre>
         <p>
-            І не забувай, ти маєш повернути вхідний рядок, якщо він досить коротке.
+            І не забувайте, що ви повинні повернути оригінальне речення, якщо воно досить коротке.
         </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            Чудово! Можеш допомогти мені це все об'єднати в одне рішення?
+            Чудово! Чи можете ви допомогти мені зібрати все це разом в одне рішення.
         </p>
     </div>
     <div class="answer">
         <p>
-            Звичайно. Ось як може бути вирішена місія.
+            Звичайно. Так можна вирішити місію.
         </p>
         <div class="spoiler">
         <pre class="brush: python">
 import textwrap
-
 
 def cut_sentence(line: str, length: int) -> str:
 
